@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		67F401573406F91781B1C7A7 /* Pods_GithubSearchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AD82DC1B6C5B72B5EE180F /* Pods_GithubSearchApp.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		199565EA0020BAB63227A424 /* Pods-GithubSearchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearchApp.debug.xcconfig"; path = "Target Support Files/Pods-GithubSearchApp/Pods-GithubSearchApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5504635A2E8690C000BC600E /* GithubSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2AD82DC1B6C5B72B5EE180F /* Pods_GithubSearchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubSearchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1A9CABD8768F6D98CFAF8E1 /* Pods-GithubSearchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearchApp.release.xcconfig"; path = "Target Support Files/Pods-GithubSearchApp/Pods-GithubSearchApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67F401573406F91781B1C7A7 /* Pods_GithubSearchApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		326745419253107B5F3FD53B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2AD82DC1B6C5B72B5EE180F /* Pods_GithubSearchApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		550463512E8690C000BC600E = {
 			isa = PBXGroup;
 			children = (
 				5504635C2E8690C000BC600E /* GithubSearchApp */,
 				5504635B2E8690C000BC600E /* Products */,
+				F8EE62E2D87FF7339006358C /* Pods */,
+				326745419253107B5F3FD53B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +76,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F8EE62E2D87FF7339006358C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				199565EA0020BAB63227A424 /* Pods-GithubSearchApp.debug.xcconfig */,
+				C1A9CABD8768F6D98CFAF8E1 /* Pods-GithubSearchApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +93,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5504636D2E8690C200BC600E /* Build configuration list for PBXNativeTarget "GithubSearchApp" */;
 			buildPhases = (
+				E9CD61088165EF449144188E /* [CP] Check Pods Manifest.lock */,
 				550463562E8690C000BC600E /* Sources */,
 				550463572E8690C000BC600E /* Frameworks */,
 				550463582E8690C000BC600E /* Resources */,
+				FB0A4EE94BA8D58D61B77312 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +107,6 @@
 				5504635C2E8690C000BC600E /* GithubSearchApp */,
 			);
 			name = GithubSearchApp;
-			packageProductDependencies = (
-			);
 			productName = GithubSearchApp;
 			productReference = 5504635A2E8690C000BC600E /* GithubSearchApp.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +155,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E9CD61088165EF449144188E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GithubSearchApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB0A4EE94BA8D58D61B77312 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GithubSearchApp/Pods-GithubSearchApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GithubSearchApp/Pods-GithubSearchApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GithubSearchApp/Pods-GithubSearchApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		550463562E8690C000BC600E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +210,7 @@
 /* Begin XCBuildConfiguration section */
 		5504636E2E8690C200BC600E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 199565EA0020BAB63227A424 /* Pods-GithubSearchApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -168,6 +239,7 @@
 		};
 		5504636F2E8690C200BC600E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1A9CABD8768F6D98CFAF8E1 /* Pods-GithubSearchApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
